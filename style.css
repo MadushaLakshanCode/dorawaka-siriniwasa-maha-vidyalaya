@@ -635,19 +635,18 @@ body {
         white-space: normal !important; 
         line-height: 1.4 !important; 
         padding: 0 10px; 
+        display: inline-block !important; /* අකුරු පේළි දෙකකට කැඩෙද්දී වර්ණය නිවැරදිව පවත්වා ගැනීමට */
         
-        /* සියලුම පරණ Gradient සහ Background බලපෑම් ඉවත් කිරීම */
-        background: transparent !important;
-        -webkit-background-clip: initial !important;
-        background-clip: initial !important;
-        -webkit-text-fill-color: initial !important; 
+        /* කලවම් වර්ණය (Gradient) නැවත එකතු කිරීම */
+        background: linear-gradient(to bottom, #fffea1, #ffc000) !important;
+        -webkit-background-clip: text !important;
+        background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+        color: transparent !important;
         
-        /* පැහැදිලි රන්වන් පැහැය පමණක් ලබා දීම */
-        color: #ffc000 !important;
-        
-        /* ෆෝන් එකට ගැටලු දෙන filter ඉවත් කර සාමාන්‍ය shadow එකක් පමණක් දීම */
-        filter: none !important; 
-        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9) !important;
+        /* ෆෝන් එකේ වර්ණය අවුල් නොවන ආකාරයේ සෙවනැල්ලක් (Shadow) පමණක් දීම */
+        filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.9)) !important;
+        text-shadow: none !important;
     }
 
     .welcome-h1 { 
