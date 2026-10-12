@@ -636,14 +636,17 @@ body {
         line-height: 1.4 !important; 
         padding: 0 10px; 
         
-        /* Gradient එක සහ එහි බලපෑම සම්පූර්ණයෙන්ම ඉවත් කිරීම */
-        background: none !important;
-        -webkit-background-clip: border-box !important;
-        background-clip: border-box !important;
-        -webkit-text-fill-color: #ffc000 !important; 
+        /* සියලුම පරණ Gradient සහ Background බලපෑම් ඉවත් කිරීම */
+        background: transparent !important;
+        -webkit-background-clip: initial !important;
+        background-clip: initial !important;
+        -webkit-text-fill-color: initial !important; 
+        
+        /* පැහැදිලි රන්වන් පැහැය පමණක් ලබා දීම */
         color: #ffc000 !important;
         
-        /* පැහැදිලිව කැපී පෙනීමට ෂැඩෝ එකක් යෙදීම */
+        /* ෆෝන් එකට ගැටලු දෙන filter ඉවත් කර සාමාන්‍ය shadow එකක් පමණක් දීම */
+        filter: none !important; 
         text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9) !important;
     }
 
