@@ -631,20 +631,20 @@ body {
 
     /* Hero Section */
     .school-h2 { 
-        font-size: 2rem !important; 
+        font-size: 2.2rem !important; 
         white-space: normal !important; 
         line-height: 1.4 !important; 
         padding: 0 10px; 
-
-        /* නැවතත් අර ලස්සන කලවම් පාට (Gradient) ලබාදීම */
-        background: linear-gradient(to bottom, #fffea1, #ffc000) !important;
-        -webkit-background-clip: text !important;
-        background-clip: text !important;
-        -webkit-text-fill-color: transparent !important;
         
-        /* පේළි දෙකකට කැඩුනත් පාට අවුල් නොවී තබා ගැනීම */
-        -webkit-box-decoration-break: clone !important;
-        box-decoration-break: clone !important;
+        /* Gradient එක සහ එහි බලපෑම සම්පූර්ණයෙන්ම ඉවත් කිරීම */
+        background: none !important;
+        -webkit-background-clip: border-box !important;
+        background-clip: border-box !important;
+        -webkit-text-fill-color: #ffc000 !important; 
+        color: #ffc000 !important;
+        
+        /* පැහැදිලිව කැපී පෙනීමට ෂැඩෝ එකක් යෙදීම */
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9) !important;
     }
 
     .welcome-h1 { 
