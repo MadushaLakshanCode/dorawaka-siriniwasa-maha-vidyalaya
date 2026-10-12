@@ -446,8 +446,19 @@ body {
     text-align: left;
 }
 
-.history-title { font-size: 2.2rem; color: black; margin-bottom: 25px; font-weight: 700; }
-.history-staff { font-size: 1.05rem; color: var(--primary); font-weight: 600; line-height: 2; margin-bottom: 18px; }
+.history-title { 
+    font-size: 2.2rem; 
+    color: black; 
+    margin-bottom: 25px; 
+    font-weight: 700; }
+.history-staff { 
+    font-size: 1.05rem; 
+    color: var(--primary); 
+    font-weight: 600; 
+    line-height: 2; 
+    margin-bottom: 18px;
+    margin-left: 40px; }
+    
 
 /* ================= PAST PRINCIPALS SECTION ================= */
 .principals-section {
@@ -544,8 +555,8 @@ body {
 .footer { 
     background: #0f172a; 
     color: #cbd5e1;
-     padding-top: 50px; 
-     margin-top: 60px; }
+    padding-top: 50px; 
+    margin-top: 60px; }
 .footer-content { 
     display: grid; 
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
@@ -587,12 +598,23 @@ body {
         display: block !important; /* රතු පාට පටිය දර්ශනය වීම */
         padding: 25px 0; /* රතු පාට පටියේ ඝනකම (ඔබට අවශ්‍ය නම් මේ අගය අඩු වැඩි කළ හැක) */
     }
+    .nav-container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    }
 
     /* Navbar & Logo */
     .mobile-menu-btn { 
-        display: block; 
-        margin-right: 50px !important;
+        display: block !important; 
+        margin-right: 0 !important;
+        margin-left: auto !important;
+        
     }
+
+    
+    
 
     .nav-links { 
         display: none; 
@@ -612,7 +634,9 @@ body {
     
     .logo { 
         gap: 10px; 
-        max-width: 85%; 
+        max-width: 95% !important; 
+        min-width: 0 !important;
+        
     }
 
     .logo-crest, 
@@ -701,6 +725,18 @@ body {
         flex-direction: column; 
         align-items: flex-start; 
         gap: 8px; 
+    }
+
+    /* විදුහල්පතිවරුන්ගේ ලැයිස්තුව ෆෝන් එකේදී දෙපසට විහිදීම */
+    .principals-section {
+        width: 90% !important; /* පළල 95% දක්වා වැඩි කිරීම */
+        padding: 25px 15px !important; /* ඇතුළත හිස් ඉඩ (padding) අඩු කිරීම */
+        margin: 20px auto !important;
+    }
+
+    .principals-list {
+        margin-left: 0 !important;
+        padding-left: 15px !important; /* ලැයිස්තුවේ වම් පස ඉඩ ෆෝන් එකට ගැලපෙන සේ හැදීම */
     }
 
     .p-date { 
