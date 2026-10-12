@@ -639,7 +639,7 @@ body {
     .school-h2 h2 { 
         font-size: 2.2rem !important; 
         white-space: normal !important; 
-        line-height: 1.4 !important; 
+        line-height: 1.1 !important; 
         
         /* අකුරු පේළි කිහිපයකට කැඩෙද්දී Gradient එක හැම පේළියකටම වෙන් වෙන්ව ලබාදීමට inline භාවිතා කිරීම */
         display: inline !important; 
