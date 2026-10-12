@@ -630,23 +630,34 @@ body {
     }
 
     /* Hero Section */
-    .school-h2 { 
+    /* Hero Section Mobile Fix */
+    .school-h2 {
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .school-h2 h2 { 
         font-size: 2.2rem !important; 
         white-space: normal !important; 
         line-height: 1.4 !important; 
-        padding: 0 10px; 
-        display: inline-block !important; /* අකුරු පේළි දෙකකට කැඩෙද්දී වර්ණය නිවැරදිව පවත්වා ගැනීමට */
         
-        /* කලවම් වර්ණය (Gradient) නැවත එකතු කිරීම */
+        /* අකුරු පේළි කිහිපයකට කැඩෙද්දී Gradient එක හැම පේළියකටම වෙන් වෙන්ව ලබාදීමට inline භාවිතා කිරීම */
+        display: inline !important; 
+        
+        /* කලවම් වර්ණය (Gradient) කෙලින්ම h2 අකුරු වලට ලබාදීම */
         background: linear-gradient(to bottom, #fffea1, #ffc000) !important;
         -webkit-background-clip: text !important;
         background-clip: text !important;
         -webkit-text-fill-color: transparent !important;
         color: transparent !important;
         
-        /* ෆෝන් එකේ වර්ණය අවුල් නොවන ආකාරයේ සෙවනැල්ලක් (Shadow) පමණක් දීම */
+        /* හැම පේළියකටම එකම පාට කැපී පෙනෙන සේ ලැබෙන බව තහවුරු කිරීමට */
+        -webkit-box-decoration-break: clone !important;
+        box-decoration-break: clone !important;
+
+        /* සෙවනැල්ල (Shadow) */
         filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.9)) !important;
-        text-shadow: none !important;
+        margin: 0;
     }
 
     .welcome-h1 { 
