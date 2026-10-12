@@ -635,6 +635,16 @@ body {
         white-space: normal !important; 
         line-height: 1.4 !important; 
         padding: 0 10px; 
+
+        /* නැවතත් අර ලස්සන කලවම් පාට (Gradient) ලබාදීම */
+        background: linear-gradient(to bottom, #fffea1, #ffc000) !important;
+        -webkit-background-clip: text !important;
+        background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+        
+        /* පේළි දෙකකට කැඩුනත් පාට අවුල් නොවී තබා ගැනීම */
+        -webkit-box-decoration-break: clone !important;
+        box-decoration-break: clone !important;
     }
 
     .welcome-h1 { 
