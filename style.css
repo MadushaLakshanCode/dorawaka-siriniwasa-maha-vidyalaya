@@ -638,7 +638,7 @@ body {
         display: inline-block !important; /* අකුරු පේළි දෙකකට කැඩෙද්දී වර්ණය නිවැරදිව පවත්වා ගැනීමට */
         
         /* කලවම් වර්ණය (Gradient) නැවත එකතු කිරීම */
-        background: linear-gradient(to bottom, #fffea1, #ffc000) !important;
+        background: linear-gradient(to bottom, #f6f6ee, #ffc000) !important;
         -webkit-background-clip: text !important;
         background-clip: text !important;
         -webkit-text-fill-color: transparent !important;
