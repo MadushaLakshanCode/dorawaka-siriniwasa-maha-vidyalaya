@@ -634,12 +634,13 @@ body {
     .school-h2 {
         text-align: center;
         padding: 0 10px;
+        line-height: 0.9 !important;
     }
 
     .school-h2 h2 { 
-        font-size: 2.2rem !important; 
+        font-size: 3rem !important; 
         white-space: normal !important; 
-        line-height: 1.1 !important; 
+        
         
         /* අකුරු පේළි කිහිපයකට කැඩෙද්දී Gradient එක හැම පේළියකටම වෙන් වෙන්ව ලබාදීමට inline භාවිතා කිරීම */
         display: inline !important; 
