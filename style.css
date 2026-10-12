@@ -1,13 +1,13 @@
 @font-face {
     font-family: 'FM Bindumathi';
-    src: url('FM-Bindumathi.ttf') format('truetype'); /* ෆොන්ට් ෆයිල් එකේ නම සහ තියෙන තැන හරියටම දෙන්න */
+    src: url('FM-Bindumathi.ttf') format('truetype');
 }
 
 /* ================= VARIABLES & RESET ================= */
 :root {
-    --primary: #7b1113;       /* School Maroon */
+    --primary: #7b1113;       
     --primary-dark: #580b0c;
-    --secondary: #f59e0b;     /* School Gold */
+    --secondary: #f59e0b;     
     --text-dark: #1e293b;
     --text-muted: #64748b;
     --bg-light: #f8fafc;
@@ -47,17 +47,12 @@ body {
     padding: 8px 0;
 }
 
-.top-bar-content{
+.top-bar-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 9px 9px;
     max-width: 1320px;
-}
-
-.top-bar-content {
-    display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
     gap: 10px;
 }
@@ -85,7 +80,6 @@ body {
     align-items: center;
     padding: 30px 20px;
     max-width: 1400px;
-    
 }
 
 .logo {
@@ -106,6 +100,13 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 1.4rem;
+}
+
+.logo-crest img {
+    width: 88px !important;
+    height: 88px !important;
+    max-width: 100% !important;
+    object-fit: contain;
 }
 
 .logo-text h1 {
@@ -185,7 +186,7 @@ body {
     align-items: center;
     color: var(--white);
     overflow: hidden;
-    background: #1e293b; /* Fallback color if image is missing */
+    background: #1e293b;
 }
 
 .hero-bg-img {
@@ -201,7 +202,7 @@ body {
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.45); /* Darkens photo slightly so white text is clear */
+    background: rgba(0, 0, 0, 0.45);
     z-index: 1;
 }
 
@@ -212,56 +213,36 @@ body {
     margin-top: 60px;
 }
 
-.badge {
-    background: var(--secondary);
-    color: #000;
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    display: inline-block;
-    margin-bottom: 15px;
-}
-
 .welcome-h1 {
     font-family: 'Arial', sans-serif;
     font-weight: 400;
     font-size: 1.5rem;
     padding-top: 50px;
     text-align: center;
-    color: transparent; /* ඇතුළත පාට මකා දැමීම */
-    -webkit-text-stroke: 1.5px #ffd700; /* රන්වන් Outline එක */
+    color: transparent;
+    -webkit-text-stroke: 1.5px #ffd700;
     letter-spacing: 3px;
     margin: 0;
-    text-shadow: 0 0 15px rgba(255, 215, 0, 0.5); /* රන්වන් Glow එක */
-    
-    opacity: 0; /* <--- මුලින්ම නොපෙනී තිබීමට (මෙය නිවැරදි කරන ලදි) */
-    animation: fadeInEffect 1.2s ease-out forwards; /* තත්පර 1.2ක් ඇතුළත ක්‍රියාත්මක වේ */
-    transform: translateX(-20px); /* Drag to left */
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+    opacity: 0;
+    animation: fadeInEffect 1.2s ease-out forwards;
+    transform: translateX(-20px);
 }
 
-/* ප්‍රධාන පාසලේ නම සඳහා */
 .school-h2 {
-    width: 100%; /* තිරයේ සම්පූර්ණ ඉඩ ලබා ගනී */
-    /* font-family: 'FM Bindumathi', sans-serif;  <-- FM ෆොන්ට් එක දැමීමට මෙය පාවිච්චි කරන්න */
+    width: 100%;
     font-size: 3.55rem;
     margin: 0;
     white-space: nowrap;
-    
-    /* රන්වන් පාටින් Gradient එකක් යෙදීම */
     background: linear-gradient(to bottom, #fffea1, #ffc000);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
-    
-    /* අකුරු පිටුපස කලු සහ රන්වන් සෙවණැල්ලක් යෙදීම */
     filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.9)) drop-shadow(0 0 25px rgba(255, 215, 0, 0.4));
     text-align: center;
-    
     opacity: 0;
-    animation: fadeInEffect 1.2s ease-out 0.5s forwards; /* තත්පර 0.5ක ප්‍රමාදයකින් පසුව ආරම්භ වේ */
+    animation: fadeInEffect 1.2s ease-out 0.5s forwards;
 }
-
-
 
 .hero-buttons {
     display: flex;
@@ -281,45 +262,15 @@ body {
     border: none;
     transition: 0.2s;
     font-size: 1.1rem;
-
 }
 
-.btn-primary {
-    background: var(--secondary);
-    color: #000;
-}
-
-.btn-primary:hover {
-    background: #d97706;
-    color: var(--white);
-}
-
-.btn-secondary {
-    background: transparent;
-    color: var(--white);
-    border: 2px solid var(--white);
-}
-
-.btn-secondary:hover {
-    background: var(--white);
-    color: var(--primary);
-}
-
-.btn-outline {
-    background: transparent;
-    color: var(--primary);
-    border: 2px solid var(--primary);
-}
-
-.btn-outline:hover {
-    background: var(--primary);
-    color: var(--white);
-}
-
-.btn-danger {
-    background: #dc2626;
-    color: var(--white);
-}
+.btn-primary { background: var(--secondary); color: #000; }
+.btn-primary:hover { background: #d97706; color: var(--white); }
+.btn-secondary { background: transparent; color: var(--white); border: 2px solid var(--white); }
+.btn-secondary:hover { background: var(--white); color: var(--primary); }
+.btn-outline { background: transparent; color: var(--primary); border: 2px solid var(--primary); }
+.btn-outline:hover { background: var(--primary); color: var(--white); }
+.btn-danger { background: #dc2626; color: var(--white); }
 
 /* ================= STATS BAR ================= */
 .stats-bar {
@@ -340,16 +291,8 @@ body {
     border-bottom: 4px solid var(--primary);
 }
 
-.stat-item i {
-    font-size: 2rem;
-    color: var(--primary);
-    margin-bottom: 8px;
-}
-
-.stat-item h3 {
-    font-size: 1.8rem;
-    color: var(--text-dark);
-}
+.stat-item i { font-size: 2rem; color: var(--primary); margin-bottom: 8px; }
+.stat-item h3 { font-size: 1.8rem; color: var(--text-dark); }
 
 /* ================= CARDS & GRIDS ================= */
 .page-banner {
@@ -360,13 +303,10 @@ body {
 }
 
 #about.page-banner h2 {
-    font-size: 3.5rem; /* <--- මෙය 2.8rem සිට 3.5rem දක්වා (හෝ ඔබට අවශ්‍ය අගයකට) වැඩි/අඩු කරන්න */
+    font-size: 3.5rem;
     margin-bottom: 15px;
     font-weight: 700;
 }
-
-
- 
 
 .section-header-flex {
     display: flex;
@@ -377,15 +317,8 @@ body {
     margin-bottom: 30px;
 }
 
-.section-title {
-    color: var(--primary);
-    font-size: 1.8rem;
-}
-
-.section-subtitle {
-    color: var(--text-muted);
-    margin-bottom: 25px;
-}
+.section-title { color: var(--primary); font-size: 1.8rem; }
+.section-subtitle { color: var(--text-muted); margin-bottom: 25px; }
 
 .card-grid {
     display: grid;
@@ -415,17 +348,8 @@ body {
     margin-bottom: 10px;
 }
 
-.card h3 {
-    color: var(--primary);
-    margin-bottom: 10px;
-}
-
-.card-meta {
-    margin-top: 15px;
-    padding-top: 12px;
-    border-top: 1px dashed var(--border);
-    font-size: 0.88rem;
-}
+.card h3 { color: var(--primary); margin-bottom: 10px; }
+.card-meta { margin-top: 15px; padding-top: 12px; border-top: 1px dashed var(--border); font-size: 0.88rem; }
 
 .join-box {
     background: #f1f5f9;
@@ -449,18 +373,8 @@ body {
 }
 
 /* ================= ABOUT & PRINCIPAL ================= */
-.two-col-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
-    margin-bottom: 30px;
-}
-
-.three-col-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
-}
+.two-col-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-bottom: 30px; }
+.three-col-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
 
 .info-box, .history-card, .contact-info-card, .contact-form-card, .admin-form-box {
     background: var(--white);
@@ -470,512 +384,8 @@ body {
     margin-bottom: 25px;
 }
 
-.info-box h3, .history-card h3 {
-    color: var(--primary);
-    margin-bottom: 12px;
-}
+.info-box h3, .history-card h3 { color: var(--primary); margin-bottom: 12px; }
 
-.principal-card {
-    display: flex;
-    gap: 30px;
-    background: var(--white);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: var(--shadow);
-    align-items: center;
-    border-left: 5px solid var(--primary);
-}
-
-.principal-card img {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid var(--secondary);
-}
-
-/* ================= COUNTERS & FILTERS ================= */
-.counter-banner {
-    background: var(--white);
-    padding: 20px 25px;
-    border-radius: 10px;
-    box-shadow: var(--shadow);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-bottom: 30px;
-    border-left: 5px solid var(--secondary);
-}
-
-.counter-banner span {
-    background: var(--primary);
-    color: var(--white);
-    padding: 2px 12px;
-    border-radius: 20px;
-}
-
-.filter-bar {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-bottom: 25px;
-}
-
-.filter-btn {
-    padding: 8px 16px;
-    border: 1px solid var(--border);
-    background: var(--white);
-    border-radius: 20px;
-    cursor: pointer;
-    font-weight: 500;
-}
-
-.filter-btn.active {
-    background: var(--primary);
-    color: var(--white);
-}
-
-/* ================= FORMS & ADMIN ================= */
-.form-group {
-    margin-bottom: 15px;
-}
-
-.form-group label {
-    display: block;
-    font-size: 0.9rem;
-    font-weight: 500;
-    margin-bottom: 5px;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-    width: 100%;
-    padding: 10px 12px;
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    font-size: 0.95rem;
-}
-
-/* File input styling */
-.form-group input[type="file"] {
-    padding: 7px;
-    background: #f8fafc;
-    cursor: pointer;
-}
-
-.contact-item {
-    display: flex;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.contact-item i {
-    font-size: 1.4rem;
-    color: var(--primary);
-    margin-top: 4px;
-}
-
-.admin-login-card {
-    max-width: 420px;
-    margin: 0 auto;
-    background: var(--white);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: var(--shadow);
-    text-align: center;
-}
-
-.admin-header-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: var(--white);
-    padding: 15px 25px;
-    border-radius: 10px;
-    margin-bottom: 25px;
-    box-shadow: var(--shadow);
-}
-
-/* ================= STAFF PHOTOS ================= */
-.staff-img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid var(--secondary);
-    margin: 0 auto 15px;
-    display: block;
-}
-
-.staff-card-header {
-    text-align: center;
-}
-
-/* ================= FOOTER ================= */
-.footer {
-    background: #0f172a;
-    color: #cbd5e1;
-    padding-top: 50px;
-    margin-top: 60px;
-}
-
-.footer-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    padding-bottom: 40px;
-}
-
-.footer h3, .footer h4 {
-    color: var(--white);
-    margin-bottom: 15px;
-}
-
-.footer-links {
-    list-style: none;
-}
-
-.footer-links li {
-    margin-bottom: 8px;
-}
-
-.footer-links a {
-    color: #cbd5e1;
-    text-decoration: none;
-}
-
-.footer-links a:hover {
-    color: var(--secondary);
-}
-
-.footer-bottom {
-    background: #020617;
-    text-align: center;
-    padding: 15px;
-    font-size: 0.85rem;
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 768px) {
-    .mobile-menu-btn {
-        display: block;
-    }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: 75px;
-        left: 0;
-        background: var(--white);
-        padding: 20px;
-        box-shadow: var(--shadow);
-    }
-
-    .nav-links.show {
-        display: flex;
-    }
-
-    .principal-card {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero h2 {
-        font-size: 1.8rem;
-    }
-}
-/* ================= HISTORY SECTION (MAGAZINE STYLE) ================= */
-.history-magazine-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* තීරු දෙක සමව බෙදීම (50% / 50%) */
-    width: 100%;
-    max-width: 1100px;
-    margin: 40px auto 60px auto;
-    border-radius: 12px;
-    overflow: hidden; /* කොටුවෙන් පිටතට යාම වැළැක්වීම */
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* අලංකාර මෘදු සෙවනැල්ලක් */
-    background: #ffffff; /* දකුණු පස සුදු පසුබිම සඳහා */
-}
-
-/* වම් පස ලා අළු පැහැති පසුබිම සහ ලාංඡනය */
-.history-logo-box {
-    background-color: #f8f9fa; /* පින්තූරයේ ඇති ලා අළු පැහැය */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 60px;
-}
-
-.history-logo-box img {
-    max-width: 75%; /* ලාංඡනය කොටුව තුළ මනාව පිහිටීම */
-    height: auto;
-    border: none;
-    box-shadow: none;
-}
-
-/* දකුණු පස අකුරු කොටස */
-.history-text-box {
-    padding: 60px 70px 60px 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: right; /* පින්තූරයේ මෙන් සියලුම අකුරු දකුණට (Right Align) පෙළගැස්වීම */
-}
-
-.history-title {
-    font-size: 2.2rem;
-    color: black; /* පාසලේ තද රතු පැහැය */
-    margin-bottom: 25px;
-    font-weight: 700;
-}
-
-/* දකුණු පස අකුරු කොටස (වම් පසට පෙළගස්වා ඇත) */
-.history-text-box {
-    padding: 60px 50px; /* අකුරු වටා ඉඩ ප්‍රමාණය වඩාත් සමබර කිරීම */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: left; /* <--- අකුරු සියල්ල වම් පසට (Left Align) පෙළගැස්වීම */
-}
-
-/* විදුහල්පති සහ ආචාර්ය නම් රතු පැහැයෙන් දැක්වීම */
-.history-staff {
-    font-size: 1.05rem;
-    color: var(--primary); /* පින්තූරයේ පරිදි පාසලේ තද රතු පැහැය */
-    font-weight: 600;
-    line-height: 2;
-    margin-bottom: 18px;
-}
-
-/* Mobile දුරකථන සඳහා (Responsive) */
-@media (max-width: 768px) {
-    .history-magazine-wrapper {
-        grid-template-columns: 1fr; /* දුරකථනයේදී තනි තීරුවක් බවට පත්වේ */
-    }
-    .history-text-box {
-        padding: 40px 20px;
-        text-align: center; /* දුරකථනයේදී අකුරු දකුණට නොතබා මැදට ගනී */
-    }
-    .history-logo-box {
-        padding: 40px;
-    }
-}
-/* ================= PAST PRINCIPALS SECTION ================= */
-.principals-section {
-    width: 80%;
-    max-width: 1100px !important; /* <--- මුළු තිරය පුරා ඇදී යාම වළක්වා, උපරිම පළල සීමා කරයි */
-    margin: 40px auto !important; /* <--- කොටුව තිරයේ හරි මැදට (Center) ගෙන එයි */
-    background-color: #fafafa; /* පෙර තිබූ ආකාරයේ ලා පැහැති පසුබිම */
-    padding: 40px 50px;
-    border-radius: 12px;
-    
-}
-
-.principals-section h4 {
-    color: black;
-    font-size: 1.75rem;
-    margin-bottom: 20px;
-    padding-bottom: 15px;
-    border-bottom: 2px solid #e2e8f0;
-}
-
-.principals-section h4 i {
-    margin-right: 8px;
-}
-
-.principals-list {
-    margin-left: 20px;
-    padding-left: 10px;
-}
-
-.principals-list li {
-    margin-bottom: 15px;
-    color: black;
-    font-weight: 100;
-}
-
-/* නම සහ දිනය පෙළගැස්වීම */
-.list-row {
-    display: flex;
-    justify-content: space-between; /* නම වමටත්, දිනය දකුණටත් ගෙන යාම */
-    align-items: center;
-    border-bottom: 1px dashed #cbd5e1; /* යටින් තිත් ඉරක් */
-    padding-bottom: 8px;
-    font-weight: 400;
-    color: #1e293b;
-}
-
-/* විදුහල්පතිවරයාගේ නම */
-.p-name {
-    font-size: 1.1rem;
-}
-
-/* මුල්ගුරු (Badge) සලකුණ */
-.badge-sm {
-    font-size: 0.75rem;
-    background: #fee2e2; /* ලා රතු පසුබිමක් */
-    color: #b91c1c; /* තද රතු අකුරු */
-    padding: 3px 8px;
-    border-radius: 6px;
-    margin-left: 10px;
-    font-weight: 600;
-    vertical-align: middle;
-}
-
-/* දිනය සඳහා ලස්සන කොටුවක් (Date Badge) */
-.p-date {
-    font-size: 1.05rem; /* ඉලක්කම් මඳක් විශාල කිරීමට */
-    color: #0f172a; /* වඩාත් තද කළු/අළු පැහැයක් ලබා දීමට */
-    background: transparent; /* පසුබිමේ ඇති කොටුව ඉවත් කිරීමට */
-    padding: 5px 0; 
-    border: none; /* වටේට ඇති ඉර (Border) ඉවත් කිරීමට */
-    box-shadow: none; /* සෙවනැල්ල (Shadow) ඉවත් කිරීමට */
-    font-weight: 100; /* ඉලක්කම් වඩාත් තදින් (Bold) පෙන්වීමට */
-}
-
-.empty-date {
-    background: transparent;
-    border: none;
-    box-shadow: none;
-    color: #94a3b8;
-    font-style: italic;
-}
-
-/* Mobile දුරකථන සඳහා (Responsive) */
-@media (max-width: 600px) {
-    .list-row {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-    }
-    .p-date {
-        margin-left: 0;
-        font-size: 0.85rem;
-    }
-}
-/* ================= VISION & MISSION (ZIG-ZAG LAYOUT) ================= */
-
-.vm-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px 350px;
-    width: 100%;
-    max-width: 1800px;
-    margin: 0 auto 60px auto;
-    background: transparent;
-    box-shadow: none;
-    padding: 20px;
-    align-items: center;
-}
-.vm-box h2 {
-    font-size: 2.2rem;
-    color: #111827; /* තද කළු පැහැය */
-    margin-bottom: 15px;
-    font-weight: 500;
-}
-
-.vm-box p {
-    font-size: 1.1rem;
-    color: #4b5563;
-    line-height: 1.8;
-}
-
-/* Vision සහ Mission කොටස් මැදට (Center) පෙළගැස්වීම */
-.text-left, .text-right {
-    text-align: center; /* සියලුම වාක්‍ය මැදට ගෙන එයි */
-    padding: 0 20px; /* වාක්‍ය දෙපසින් අමතර ඉඩක් ලබා දී වඩාත් ලස්සන කරයි */
-}
-
-.img-left, .img-right {
-    text-align: center; /* අයිකන මැදට ගෙන එයි */
-}
-.vm-box img {
-    max-width: 300px !important; 
-    margin-top: -40px;
-    height: auto !important;
-    mix-blend-mode: darken !important; 
-    filter: drop-shadow(0 15px 20px rgba(0,0,0,0.15)); 
-    transition: transform 0.8s ease;
-}
-
-/* Mobile දුරකථන සඳහා (Responsive) */
-@media (max-width: 768px) {
-    .vm-grid {
-        grid-template-columns: 1fr; /* තනි තීරුවක් බවට පත් කිරීම */
-        text-align: center;
-        padding: 30px 20px;
-    }
-    .text-right, .text-left, .img-left, .img-right {
-        text-align: center;
-    }
-    /* Mobile එකේදී පිළිවෙළට පෙන්වීමට */
-    .vm-grid > div:nth-child(1) { order: 1; } /* Vision Text */
-    .vm-grid > div:nth-child(3) { order: 2; } /* Vision Img */
-    .vm-grid > div:nth-child(4) { order: 3; } /* Mission Text */
-    .vm-grid > div:nth-child(2) { order: 4; } /* Mission Img */
-}
-
-/* ================= SINHALA VISION & MISSION STYLES ================= */
-.sinhala-heading {
-    font-size: 2.5rem !important; /* මාතෘකාව විශාල කිරීම */
-    color: var(--primary) !important; /* පාසලේ තද රතු වර්ණය යෙදීම */
-    margin-bottom: 20px;
-    font-weight: 700;
-}
-
-.sinhala-text {
-    font-size: 1.35rem !important; /* සිංහල වාක්‍ය කියවීමට පහසු වන සේ විශාල කිරීම */
-    color: #334155 !important;
-    line-height: 2.2 !important; /* පේළි අතර පරතරය වැඩි කිරීම */
-    font-weight: 500;
-}
-
-/* අයිකන (Images) වඩාත් ආකර්ෂණීය කිරීම */
-.vm-box img {
-    max-width: 170px;
-    height: auto;
-    filter: drop-shadow(0 15px 20px rgba(0,0,0,0.15)); /* අයිකන වලට ලස්සන සෙවනැල්ලක් (Shadow) ලබා දීම */
-    transition: transform 0.3s ease; /* Mouse එක ගෙන ගිය විට සිදුවන වෙනස මෘදු කිරීම */
-}
-
-/* Mouse එක පින්තූර මතට ගෙන ගිය විට (Hover effect) */
-.vm-box img:hover {
-    transform: scale(1.1) translateY(-5px); /* පින්තූරය මඳක් ඉහළට එසවී විශාල වීම */
-}
-
-
-
-
-/* Administration මාතෘකාව සහ Staff Grid එක දෙපසින් මැදට කිරීම */
-#about .section-title, 
-#about .section-subtitle, 
-#staff-grid {
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-/* Mobile දුරකථන වලදී එම ලොකු ඉඩ ඉවත් කර සාමාන්‍ය පරිදි පෙන්වීමට */
-@media (max-width: 768px) {
-    .principal-card {
-        margin-left: 0;
-        margin-right: 0;
-    }
-    #about .section-title, 
-    #about .section-subtitle, 
-    #staff-grid {
-        padding-left: 0;
-        padding-right: 0;
-    }
-}
-
-
-
-/* ================= CLEANED UP PRINCIPAL CARD ================= */
 .principal-card {
     display: flex;
     gap: 50px;
@@ -984,8 +394,8 @@ body {
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     width: 100%;
-    max-width: 1600px; /* උපරිම පළල සීමා කිරීම */
-    margin: 50px auto; /* කොටුව තිරයේ හරි මැදට ගෙන ඒම */
+    max-width: 1600px;
+    margin: 50px auto;
     align-items: center;
     border-left: none;
     box-sizing: border-box;
@@ -1001,51 +411,370 @@ body {
     transition: transform 0.3s ease;
 }
 
-.principal-card img:hover {
-    transform: scale(1.05);
+.principal-card img:hover { transform: scale(1.05); }
+.principal-info h3 { font-size: 2.2rem; color: var(--primary); font-weight: 700; margin-bottom: 8px; }
+.principal-info h4 { font-size: 1.15rem; color: #475569; font-weight: 600; margin-bottom: 15px; }
+
+/* ================= HISTORY SECTION ================= */
+.history-magazine-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    max-width: 1100px;
+    margin: 40px auto 60px auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    background: #ffffff;
 }
 
-.principal-info h3 {
-    font-size: 2.2rem;
-    color: var(--primary);
-    font-weight: 700;
-    margin-bottom: 8px;
+.history-logo-box {
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
 }
 
-.principal-info h4 {
-    font-size: 1.15rem;
-    color: #475569;
-    font-weight: 600;
-    margin-bottom: 15px;
+.history-logo-box img { max-width: 75%; height: auto; border: none; box-shadow: none; }
+
+.history-text-box {
+    padding: 60px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
 }
 
-/* Mobile Responsive Fix */
-@media (max-width: 768px) {
-    .vm-grid {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 40px;
-    }
-    .principal-card {
-        flex-direction: column;
-        text-align: center;
-        padding: 30px 20px;
-    }
-    .principal-card img {
-        width: 100%;
-        max-width: 250px;
-        height: auto;
-    }
+.history-title { font-size: 2.2rem; color: black; margin-bottom: 25px; font-weight: 700; }
+.history-staff { font-size: 1.05rem; color: var(--primary); font-weight: 600; line-height: 2; margin-bottom: 18px; }
+
+/* ================= PAST PRINCIPALS SECTION ================= */
+.principals-section {
+    width: 80%;
+    max-width: 1100px !important;
+    margin: 40px auto !important;
+    background-color: #fafafa;
+    padding: 40px 50px;
+    border-radius: 12px;
 }
 
+.principals-section h4 { color: black; font-size: 1.75rem; margin-bottom: 20px; padding-bottom: 15px; border-bottom: 2px solid #e2e8f0; }
+.principals-section h4 i { margin-right: 8px; }
+.principals-list { margin-left: 20px; padding-left: 10px; }
+.principals-list li { margin-bottom: 15px; color: black; font-weight: 100; }
+
+.list-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px dashed #cbd5e1;
+    padding-bottom: 8px;
+    font-weight: 400;
+    color: #1e293b;
+}
+
+.p-name { font-size: 1.1rem; }
+.p-date { font-size: 1.05rem; color: #0f172a; background: transparent; padding: 5px 0; border: none; box-shadow: none; font-weight: 100; }
+.empty-date { background: transparent; border: none; box-shadow: none; color: #94a3b8; font-style: italic; }
+
+/* ================= VISION & MISSION ================= */
+.vm-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 350px;
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto 60px auto;
+    background: transparent;
+    box-shadow: none;
+    padding: 20px;
+    align-items: center;
+}
+
+.vm-box h2 { font-size: 2.2rem; color: #111827; margin-bottom: 15px; font-weight: 500; }
+.vm-box p { font-size: 1.1rem; color: #4b5563; line-height: 1.8; }
+.text-left, .text-right { text-align: center; padding: 0 20px; }
+.img-left, .img-right { text-align: center; }
+
+.vm-box img {
+    max-width: 300px !important; 
+    margin-top: -40px;
+    height: auto !important;
+    mix-blend-mode: darken !important; 
+    filter: drop-shadow(0 15px 20px rgba(0,0,0,0.15)); 
+    transition: transform 0.8s ease;
+}
+
+.vm-box img:hover { transform: scale(1.1) translateY(-5px); }
+
+.sinhala-heading { font-size: 2.5rem !important; color: var(--primary) !important; margin-bottom: 20px; font-weight: 700; }
+.sinhala-text { font-size: 1.35rem !important; color: #334155 !important; line-height: 2.2 !important; font-weight: 500; }
+
+/* ================= FORMS & ADMIN ================= */
+.form-group { margin-bottom: 15px; }
+.form-group label { display: block; font-size: 0.9rem; font-weight: 500; margin-bottom: 5px; }
+.form-group input, .form-group select, .form-group textarea { width: 100%; padding: 10px 12px; border: 1px solid var(--border); border-radius: 6px; font-size: 0.95rem; }
+.form-group input[type="file"] { padding: 7px; background: #f8fafc; cursor: pointer; }
+
+.contact-item { display: flex; gap: 15px; margin-top: 20px; }
+.contact-item i { font-size: 1.4rem; color: var(--primary); margin-top: 4px; }
+
+.admin-login-card { max-width: 420px; margin: 0 auto; background: var(--white); padding: 30px; border-radius: 10px; box-shadow: var(--shadow); text-align: center; }
+.admin-header-bar { display: flex; justify-content: space-between; align-items: center; background: var(--white); padding: 15px 25px; border-radius: 10px; margin-bottom: 25px; box-shadow: var(--shadow); }
+
+/* ================= COUNTERS & FILTERS ================= */
+.counter-banner { background: var(--white); padding: 20px 25px; border-radius: 10px; box-shadow: var(--shadow); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; margin-bottom: 30px; border-left: 5px solid var(--secondary); }
+.counter-banner span { background: var(--primary); color: var(--white); padding: 2px 12px; border-radius: 20px; }
+.filter-bar { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 25px; }
+.filter-btn { padding: 8px 16px; border: 1px solid var(--border); background: var(--white); border-radius: 20px; cursor: pointer; font-weight: 500; }
+.filter-btn.active { background: var(--primary); color: var(--white); }
+
+/* ================= STAFF PHOTOS ================= */
+.staff-img { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 3px solid var(--secondary); margin: 0 auto 15px; display: block; }
+.staff-card-header { text-align: center; }
+
+/* ================= ANIMATIONS ================= */
 @keyframes fadeInEffect {
-    0% {
-        opacity: 0;
-        transform: scale(0.9); /* මඳක් කුඩාවට ආරම්භ වේ */
-    }
-    100% {
-        opacity: 0.9; /* අවසානයේ පැහැදිලිව දර්ශනය වේ */
-        transform: scale(1); /* සාමාන්‍ය ප්‍රමාණයට පැමිණේ */
-    }
+    0% { opacity: 0; transform: scale(0.9); }
+    100% { opacity: 0.9; transform: scale(1); }
 }
 
+/* ================= FOOTER ================= */
+.footer { 
+    background: #0f172a; 
+    color: #cbd5e1;
+     padding-top: 50px; 
+     margin-top: 60px; }
+.footer-content { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 30px; 
+    padding-bottom: 40px; }
+
+.footer h3, .footer h4 { 
+    color: var(--white); 
+    margin-bottom: 15px; }
+
+.footer-links { 
+    list-style: none; }
+
+.footer-links li { 
+    margin-bottom: 8px; }
+
+.footer-links a { 
+    color: #cbd5e1; 
+    text-decoration: none; }
+
+.footer-links a:hover { 
+    color: var(--secondary); }
+
+.footer-bottom { 
+    background: #020617; 
+    text-align: center; 
+    padding: 15px; 
+    font-size: 0.85rem; }
+
+/* ================= MOBILE RESPONSIVE FIXES (CLEANED) ================= */
+@media screen and (max-width: 768px) {
+    
+    /* Top Bar */
+    .top-bar-content { 
+        display: none !important; /* ඇතුළේ තියෙන විස්තර ටික පමණක් නොපෙනී යාම */
+    }
+    
+    .top-bar {
+        display: block !important; /* රතු පාට පටිය දර්ශනය වීම */
+        padding: 25px 0; /* රතු පාට පටියේ ඝනකම (ඔබට අවශ්‍ය නම් මේ අගය අඩු වැඩි කළ හැක) */
+    }
+
+    /* Navbar & Logo */
+    .mobile-menu-btn { 
+        display: block; 
+    }
+
+    .nav-links { 
+        display: none; 
+        flex-direction: column; 
+        width: 100%; 
+        position: absolute; 
+        top: 75px; 
+        left: 0; 
+        background: var(--white); 
+        padding: 20px; 
+        box-shadow: var(--shadow); 
+    }
+
+    .nav-links.show { 
+        display: flex; 
+    }
+    
+    .logo { 
+        gap: 10px; 
+        max-width: 85%; 
+    }
+
+    .logo-crest, 
+    .logo-crest img { 
+        width: 65px !important; 
+        height: 65px !important; 
+    }
+
+    .logo-text h1 { 
+        font-size: 1.1rem !important; 
+    }
+
+    .logo-text p { 
+        font-size: 0.85rem !important; 
+    }
+
+    /* Hero Section */
+    .school-h2 { 
+        font-size: 2rem !important; 
+        white-space: normal !important; 
+        line-height: 1.4 !important; 
+        padding: 0 10px; 
+    }
+
+    .welcome-h1 { 
+        font-size: 1.2rem !important; 
+        padding-top: 20px !important; 
+    }
+
+    .hero-buttons { 
+        flex-direction: column; 
+        gap: 15px !important; 
+        margin-top: 40px !important; 
+        width: 90%; 
+        margin-left: auto; 
+        margin-right: auto; 
+    }
+
+    .hero-buttons .btn { 
+        width: 100%; 
+        font-size: 1rem; 
+    }
+
+    /* History Section */
+    .history-magazine-wrapper { 
+        grid-template-columns: 1fr; 
+    }
+
+    .history-text-box { 
+        padding: 40px 20px; 
+        text-align: center; 
+    }
+
+    .history-logo-box { 
+        padding: 40px; 
+    }
+
+    /* Principals List */
+    .list-row { 
+        flex-direction: column; 
+        align-items: flex-start; 
+        gap: 8px; 
+    }
+
+    .p-date { 
+        margin-left: 0; 
+        font-size: 0.85rem; 
+    }
+
+    /* Vision & Mission */
+    .vm-grid { 
+        grid-template-columns: 1fr; 
+        text-align: center; 
+        gap: 30px !important; 
+        padding: 30px 20px; 
+    }
+
+    .text-right, 
+    .text-left, 
+    .img-left, 
+    .img-right { 
+        text-align: center; 
+    }
+
+    .vm-grid > div:nth-child(1) { order: 1; }
+    .vm-grid > div:nth-child(3) { order: 2; }
+    .vm-grid > div:nth-child(4) { order: 3; }
+    .vm-grid > div:nth-child(2) { order: 4; }
+
+    /* Principal Card & About Sections */
+    .principal-card { 
+        flex-direction: column !important; 
+        text-align: center; 
+        padding: 30px 20px !important; 
+        margin: 20px 10px !important; /* කොටුව වටා කුඩා ඉඩක් තැබීම */
+        gap: 20px !important; /* පින්තූරය සහ අකුරු අතර තිබූ විශාල පරතරය අඩු කිරීම */
+    }
+
+    .principal-card img { 
+        width: 180px !important; /* පින්තූරය ෆෝන් එකට ගැලපෙන සේ කුඩා කිරීම */
+        height: 180px !important; 
+        max-width: 100% !important; 
+        margin: 0 auto; 
+    }
+    .principal-info .badge-tag {
+        font-size: 0.9rem !important; /* අකුරු ඉතා කුඩා කිරීම */
+        padding: 3px 8px !important; /* වටේ ඇති ඉඩ අඩු කිරීම */
+        display: inline-block;
+        margin-bottom: 2px !important;
+        border-radius: 4px;
+    }
+
+    .principal-info h3 {
+        font-size: 1.1rem !important; /* නමේ අකුරු කුඩා කිරීම */
+        margin-bottom: 5px !important;
+    }
+
+    .principal-info h4 {
+        font-size: 0.95rem !important; /* තනතුරේ අකුරු කුඩා කිරීම */
+        line-height: 1.4 !important;
+    }
+
+    .principal-info p {
+        font-size: 0.9rem !important; /* පණිවිඩයේ අකුරු කුඩා කිරීම */
+        line-height: 1.6 !important;
+    }
+
+    #about .section-title, 
+    #about .section-subtitle, 
+    #staff-grid { 
+        padding-left: 0; 
+        padding-right: 0; 
+    }
+
+
+    /* විදුහල්පතිතුමාගෙන් පසු ඇති මාතෘකා සහ ගුරුවරුන්ගේ විස්තර කුඩා කිරීම */
+    .section-title {
+        font-size: 1.4rem !important; /* ප්‍රධාන මාතෘකා කුඩා කිරීම */
+        text-align: center;
+    }
+
+    .section-subtitle {
+        font-size: 0.85rem !important; /* උප මාතෘකා කුඩා කිරීම */
+        text-align: center;
+    }
+
+    .staff-img {
+        width: 80px !important; /* ගුරුවරුන්ගේ පින්තූර තරමක් කුඩා කිරීම */
+        height: 80px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .staff-card-header h3 {
+        font-size: 1.1rem !important; /* ගුරුවරුන්ගේ නම් කුඩා කිරීම */
+        margin-bottom: 2px !important;
+    }
+
+    .staff-card-header p {
+        font-size: 0.85rem !important; /* විෂයයන් පෙන්වන අකුරු කුඩා කිරීම */
+    }
+
+    .staff-card-header .card-tag {
+        font-size: 0.75rem !important; /* තනතුර පෙන්වන ලේබලය (Badge) කුඩා කිරීම */
+        padding: 3px 8px !important;
+    }
+}
