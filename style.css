@@ -634,7 +634,7 @@ body {
     .school-h2 {
         text-align: center;
         padding: 0 10px;
-        line-height: 0.6 !important;
+        line-height: 0.9 !important;
     }
 
     .school-h2 h2 { 
@@ -658,7 +658,9 @@ body {
 
         /* සෙවනැල්ල (Shadow) */
         filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.9)) !important;
-        margin: 0;
+        margin: 0 !important;
+        padding: 0 !important;
+        line-height: 0.9 !important;
     }
 
     .welcome-h1 { 
