@@ -27,6 +27,40 @@ const defaultData = {
     ]
 };
 
+
+// මුල් වරට විස්තර නොමැති නම් Default විස්තර ලබා දීම
+if (!localStorage.getItem("adminCredentials")) {
+    localStorage.setItem("adminCredentials", JSON.stringify({ user: "admin", pass: "admin123" }));
+}
+
+function loginAdmin() {
+    const inputUser = document.getElementById("admin-user").value;
+    const inputPass = document.getElementById("admin-password").value;
+    const storedCreds = JSON.parse(localStorage.getItem("adminCredentials"));
+
+    if (inputUser === storedCreds.user && inputPass === storedCreds.pass) {
+        isAdminLoggedIn = true;
+        document.getElementById("admin-login-box").style.display = "none";
+        document.getElementById("admin-dashboard").style.display = "block";
+        
+        // ඩෑෂ්බෝඩ් එකට අවශ්‍ය අනෙකුත් දත්ත පිරවීම
+        if (schoolData.stats) {
+            document.getElementById("admin-students").value = schoolData.stats.students;
+            document.getElementById("admin-staff").value = schoolData.stats.staff;
+        }
+        if (schoolData.principal) {
+            document.getElementById("admin-prin-name").value = schoolData.principal.name;
+            document.getElementById("admin-prin-title").value = schoolData.principal.title;
+            document.getElementById("admin-prin-message").value = schoolData.principal.message;
+        }
+
+        renderAll();
+        alert("Logged in successfully!");
+    } else {
+        alert("Incorrect username or password!");
+    }
+}
+
 // ================= STATE MANAGEMENT =================
 let schoolData = JSON.parse(localStorage.getItem("dorawakaSchoolData")) || defaultData;
 let isAdminLoggedIn = false;
@@ -402,4 +436,21 @@ function renderHomeLatestVictory() {
             </div>
         </div>`;
     }
+}
+
+// Admin Account Settings - Username & Password Update Function
+function updateAdminCredentials(e) {
+    e.preventDefault();
+    const newUser = document.getElementById("new-admin-user").value.trim();
+    const newPass = document.getElementById("new-admin-pass").value.trim();
+
+    if (newUser === "" || newPass === "") {
+        alert("Please enter both username and password!");
+        return;
+    }
+
+    localStorage.setItem("adminCredentials", JSON.stringify({ user: newUser, pass: newPass }));
+    
+    alert("Admin username and password updated successfully! Please log in again with your new details.");
+    logoutAdmin();
 }
